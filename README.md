@@ -2,6 +2,7 @@
 
 Development application with full features, login, passwords, database interactions, navigation, etc.
 
-- [x] Root Home Route - Basic Setup
-- [x] Users Database
+- [x] Build Root Home Route - Basic Setup of Controller/View
+- [x] Create & Migrate Users Database
+- [x] Add Users Seed Data
 - [ ] Signup/Login Feature
