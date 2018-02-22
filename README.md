@@ -2,6 +2,6 @@
 
 Development application with full features, login, passwords, database interactions, navigation, etc.
 
-- [ ] Root Home Route
+- [x] Root Home Route - Basic Setup
 - [ ] User Database
 - [ ] Signup/Login Feature
