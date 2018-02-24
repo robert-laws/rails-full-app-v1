@@ -1,5 +1,12 @@
 <h1>User Details</h1>
 
+<% if current_user %>
+  <ul>
+    <li><%= link_to "Hello, #{current_user.username}!", user_path(current_user) %></li>
+    <li><%= link_to "Log Out", signout_path, method: :delete %></li>
+  </ul>
+<% end %>
+
 <h4>
   Username: <%= @user.username %>
 </h4>
