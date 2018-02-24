@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   # user routes
-  resources :users, only: [:new, :create]
+  resources :users, only: [:show, :new, :create]
 end
