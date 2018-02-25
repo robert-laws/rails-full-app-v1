@@ -1,3 +1,19 @@
-<h1>Home Page</h1>
+<section class="section">
+    <div class="container">
+      <h1 class="title">
+        <figure class="image is-48x48">
+          <%= image_tag 'blog-logo.png' %>
+        </figure>
+        Hello World
+      </h1>
+      <p class="subtitle">
+        <span class="icon">
+         <%= fa_icon "home" %>
+        </span>
+        <%= @greeting %>
+      </p>
+    </div>
+  </section>
+  </body>
+</html>
 
-<%= @greeting %>
