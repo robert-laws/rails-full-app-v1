@@ -1,11 +1,14 @@
-<h1>User Details</h1>
-
-<% if current_user %>
+<nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
   <ul>
-    <li><%= link_to "Hello, #{current_user.username}!", user_path(current_user) %></li>
-    <li><%= link_to "Log Out", signout_path, method: :delete %></li>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'All Users', users_path %></li>
+    <li class="is-active"><a href="#" aria-current="page"><%= @user.username.capitalize %></a></li>
   </ul>
-<% end %>
+</nav>
+
+<%= render 'shared/flash' %>
+
+<h1 class="title">User Details</h1>
 
 <h4>
   Username: <%= @user.username %>

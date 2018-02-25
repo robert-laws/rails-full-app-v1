@@ -1,3 +1,11 @@
+/** Update Bulma Classes **/
+
+.section {
+  padding: 1.5rem
+}
+
+/** Error Classes **/
+
 #errors_explanation {
   margin-bottom: 12px;
 }

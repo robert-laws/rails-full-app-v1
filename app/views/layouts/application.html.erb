@@ -35,9 +35,7 @@
             <div class="field is-grouped">
               <% if current_user %>
                 <p class="control">
-                  <a href="<%= signout_path %>" class="button is-info">
-                    <span>Logout</span>
-                  </a>
+                  <%= link_to "Log Out", signout_path, method: :delete, class: 'button is-info' %>
                 </p>
               <% else %>
                 <p class="control">
@@ -62,7 +60,6 @@
         <%= yield %>
       </div>
     </div>
-    
 
   </body>
 </html>
