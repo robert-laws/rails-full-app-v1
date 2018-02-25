@@ -2,13 +2,65 @@
 <html>
   <head>
     <title>RailsFullAppV1</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!-- Navigation -->
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="<%= root_path %>">
+          <%= image_tag('blog-logo-white.png', size: '28x28', alt: 'Full App Home') %>
+        </a>
+
+        <div class="navbar-burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start">
+          <%= link_to 'Home', root_path, class: "navbar-item" %>
+          <a class="navbar-item">Home</a>
+          <a class="navbar-item">About</a>
+          <a class="navbar-item">Information</a>
+          <a class="navbar-item">Contact</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <% if current_user %>
+                <p class="control">
+                  <a href="<%= signout_path %>" class="button is-info">
+                    <span>Logout</span>
+                  </a>
+                </p>
+              <% else %>
+                <p class="control">
+                  <a href="<%= new_user_path %>" class="button is-info">
+                    <span>Sign Up</span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a href="<%= signin_path %>" class="button is-info">
+                    <span>Sign In</span>
+                  </a>
+                </p>              
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
     <%= yield %>
   </body>
 </html>
