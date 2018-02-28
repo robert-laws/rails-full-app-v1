@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   post '/users', to: 'users#create'
   get '/users/:id', to: 'users#show', as: 'user'
   get '/signup', to: 'users#new', as: 'new_user'
+
+  # html pages templates
+  get '/html/users', to: 'html#users_index'
+  get '/html/user', to: 'html#users_show'
 end
