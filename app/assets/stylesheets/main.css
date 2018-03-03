@@ -22,3 +22,8 @@
   border: 1px solid red;
   margin-top: 10px;
 }
+
+a.navbar-item.is-active {
+  font-weight: bold;
+  color: cornflowerblue !important; 
+}

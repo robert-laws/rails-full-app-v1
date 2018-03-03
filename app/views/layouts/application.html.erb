@@ -23,11 +23,9 @@
       </div>
       <div class="navbar-menu" id="navMenu">
         <div class="navbar-start">
-          <%= link_to 'Home', root_path, class: "navbar-item" %>
-          <a class="navbar-item">Home</a>
-          <a class="navbar-item">About</a>
-          <a class="navbar-item">Information</a>
-          <a class="navbar-item">Contact</a>
+          <%= link_to 'Home', root_path, class: "navbar-item #{'is-active' if current_path.nil?}" %>
+          <%= link_to 'About', about_path, class: "navbar-item #{'is-active' if current_path == 'about'}" %>
+          <%= link_to 'Contact', contact_path, class: "navbar-item #{'is-active' if current_path == 'contact'}" %>
         </div>
 
         <div class="navbar-end">
